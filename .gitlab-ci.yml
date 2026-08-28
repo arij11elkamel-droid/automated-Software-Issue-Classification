@@ -1,0 +1,18 @@
+stages:
+  - test
+test:
+  stage: test
+  image: python:3.11.4
+  before_script:
+    - python -m pip install --upgrade pip  
+    - pip install numpy==1.24.0 
+    - pip install -r requirements.txt
+    - pip install pytest pytest-cov
+    - python -m nltk.downloader punkt stopwords wordnet
+  script:
+    - pytest --cov=app --cov-report=xml --cov-report=html
+  artifacts:
+    paths:
+      - htmlcov/   
+  only:
+    - main  

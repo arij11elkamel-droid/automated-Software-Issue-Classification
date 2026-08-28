@@ -1,0 +1,31 @@
+<!-- correct.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Correct Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Correct Issue Label</h1>
+    </header>
+    
+    <div class="form-container">
+        <label for="issue_id">Issue ID:</label>
+        <input type="text" id="issue_id" name="issue_id" required><br>
+
+        <label for="corrected_label">Corrected Label:</label>
+        <input type="text" id="corrected_label" name="corrected_label" required><br>
+
+        <button  id="submitButton" >Submit</button> 
+        
+        <div id="confidenceDisplay">  </div>
+        <div> ------------------------</div>
+        <div id="submissionResult">  </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script_correct.js') }}"></script>
+</body>
+</html>

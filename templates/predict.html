@@ -1,0 +1,32 @@
+<!-- predict.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predict Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Predict Issue Type</h1>
+    </header>
+    
+    <div class="form-container">
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title" required><br>
+
+        <label for="body">Body:</label>
+        <textarea id="body" name="body" required></textarea><br>
+
+        <button id="predictButton">Predict</button>
+
+        <div id="predictionResult">
+            <p>Predicted Label: <span id="predictedLabel">None</span></p>
+            <p>Confidence: <span id="confidence">0%</span></p>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script_predict.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+global:
+  scrape_interval: 15s
+
+scrape_configs:
+  - job_name: 'flask_backend'
+    static_configs:
+      - targets: ['flask_backend:5000']
